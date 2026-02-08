@@ -13,6 +13,97 @@ const allImagesMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/taco v01 Medium.png', aspectRatio: 'portrait', caption: 'Refraction & Form' }
 ];
 
+
+const cyberGothicMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/cyber-gothic/1.png', aspectRatio: 'square', caption: 'Neo-Gothic Cathedral' },
+  { type: 'image', url: '/videos/cyber-gothic/2.png', aspectRatio: 'square', caption: 'Cybernetic Gargoyle' },
+  { type: 'image', url: '/videos/cyber-gothic/3.png', aspectRatio: 'square', caption: 'Stained Glass Mechanics' },
+  { type: 'image', url: '/videos/cyber-gothic/4.png', aspectRatio: 'square', caption: 'The Cyber Knight' },
+];
+
+const nanoSkinMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/nano-skin/1.png', aspectRatio: 'square', caption: 'Synthetic Biometrics' },
+  { type: 'image', url: '/videos/nano-skin/2.png', aspectRatio: 'square', caption: 'Neural Interface' },
+  { type: 'image', url: '/videos/nano-skin/3.png', aspectRatio: 'square', caption: 'Bio-Digital Fusion' },
+  { type: 'image', url: '/videos/nano-skin/4.png', aspectRatio: 'square', caption: 'Data Veins' },
+
+];
+
+const neuralPortraitsMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/neural-portraits/1.png', aspectRatio: 'square', caption: 'The Observer' },
+  { type: 'image', url: '/videos/neural-portraits/2.png', aspectRatio: 'square', caption: 'Synthetic Gaze' },
+  { type: 'image', url: '/videos/neural-portraits/3.png', aspectRatio: 'square', caption: 'Digital Soul' },
+  { type: 'image', url: '/videos/neural-portraits/4.png', aspectRatio: 'square', caption: 'Echoes of Humanity' },
+
+];
+
+const takoyakiBallsMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/neural-portraits/1.png', aspectRatio: 'square', caption: 'Culinary Texture' },
+  { type: 'image', url: '/videos/neural-portraits/2.png', aspectRatio: 'square', caption: 'Street Food Art' },
+  { type: 'image', url: '/videos/neural-portraits/3.png', aspectRatio: 'square', caption: 'Golden Perfection' },
+  { type: 'image', url: '/videos/neural-portraits/4.png', aspectRatio: 'square', caption: 'Sauce Drizzle' },
+
+];
+
+const desertRunnerMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/desert-runner/1.png', aspectRatio: 'square', caption: 'Endless Horizon' },
+  { type: 'image', url: '/videos/desert-runner/2.png', aspectRatio: 'square', caption: 'Running Against Time' },
+  { type: 'image', url: '/videos/desert-runner/3.png', aspectRatio: 'square', caption: 'Heat Haze' },
+  { type: 'image', url: '/videos/desert-runner/4.png', aspectRatio: 'square', caption: 'Solitude' },
+];
+
+const formula1Media: ProjectMedia[] = [
+  { type: 'image', url: '/videos/formula-1/1.png', aspectRatio: 'square', caption: 'Race Day' },
+  { type: 'image', url: '/videos/formula-1/2.png', aspectRatio: 'square', caption: 'Pit Stop' },
+  { type: 'image', url: '/videos/formula-1/3.png', aspectRatio: 'square', caption: 'Victory Lap' },
+  { type: 'image', url: '/videos/formula-1/4.png', aspectRatio: 'square', caption: 'Podium' },
+];
+
+
+
+
+const voltForgeMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/volt-forge/1.png', aspectRatio: 'square', caption: 'Electric Core' },
+  { type: 'image', url: '/videos/volt-forge/2.png', aspectRatio: 'square', caption: 'Industrial Power' },
+  { type: 'image', url: '/videos/volt-forge/3.png', aspectRatio: 'square', caption: 'Energy Flow' },
+  { type: 'image', url: '/videos/volt-forge/4.png', aspectRatio: 'square', caption: 'Tech Aesthetics' },
+
+];
+
+const voidTexturesMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/void-textures/1.png', aspectRatio: 'square', caption: 'Abstract Void' },
+  { type: 'image', url: '/videos/void-textures/2.png', aspectRatio: 'square', caption: 'Minimalist Noise' },
+  { type: 'image', url: '/videos/void-textures/3.png', aspectRatio: 'square', caption: 'Dark Matter' },
+  { type: 'image', url: '/videos/void-textures/4.png', aspectRatio: 'square', caption: 'Deep Space' },
+
+];
+
+const neonGothicMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/neon-gothic/1.png', aspectRatio: 'square', caption: 'Neo-Gothic Cathedral' },
+  { type: 'image', url: '/videos/neon-gothic/2.png', aspectRatio: 'square', caption: 'Cybernetic Gargoyle' },
+  { type: 'image', url: '/videos/neon-gothic/3.png', aspectRatio: 'square', caption: 'Stained Glass Mechanics' },
+  { type: 'image', url: '/videos/neon-gothic/4.png', aspectRatio: 'square', caption: 'The Cyber Knight' },
+
+];
+
+const tacoRealityMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/taco-reality/1.png', aspectRatio: 'square', caption: 'Culinary Texture' },
+  { type: 'image', url: '/videos/taco-reality/2.png', aspectRatio: 'square', caption: 'Street Food Art' },
+  { type: 'image', url: '/videos/taco-reality/3.png', aspectRatio: 'square', caption: 'Golden Perfection' },
+  { type: 'image', url: '/videos/taco-reality/4.png', aspectRatio: 'square', caption: 'Sauce Drizzle' },
+
+];
+const chronosReflectionMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/chronos-reflection/1.png', aspectRatio: 'square', caption: 'Time Manipulation' },
+  { type: 'image', url: '/videos/chronos-reflection/2.png', aspectRatio: 'square', caption: 'Temporal Distortion' },
+  { type: 'image', url: '/videos/chronos-reflection/3.png', aspectRatio: 'square', caption: 'Past & Future' },
+  { type: 'image', url: '/videos/chronos-reflection/5.png', aspectRatio: 'square', caption: 'Time Travel' },
+
+
+];
+
+
+
 export const projects: Project[] = [
   {
     id: 'formula-1',
@@ -26,7 +117,8 @@ export const projects: Project[] = [
     tags: ['Veo', 'Motorsport', 'Cinematic'],
     media: [
       { type: 'video', url: '/videos/f1.mp4', aspectRatio: 'landscape' },
-      ...allImagesMedia
+      allImagesMedia[5],
+      allImagesMedia[8]
     ]
   },
   {
@@ -41,7 +133,8 @@ export const projects: Project[] = [
     tags: ['Nature', 'AI Video', 'Creature'],
     media: [
       { type: 'video', url: '/videos/Majestic_Tiger_s_Jungle_Stare.mp4', aspectRatio: 'landscape' },
-      ...allImagesMedia
+      allImagesMedia[2],
+      allImagesMedia[4]
     ]
   },
   {
@@ -56,7 +149,8 @@ export const projects: Project[] = [
     tags: ['FPV', 'Action', 'Cinematic'],
     media: [
       { type: 'video', url: '/videos/fpv.mp4', aspectRatio: 'landscape' },
-      ...allImagesMedia
+      allImagesMedia[6],
+      allImagesMedia[7]
     ]
   },
   {
@@ -71,7 +165,8 @@ export const projects: Project[] = [
     tags: ['Motion', 'Experimental', 'Visuals'],
     media: [
       { type: 'video', url: '/videos/iad.mp4', aspectRatio: 'landscape' },
-      ...allImagesMedia
+      allImagesMedia[0],
+      allImagesMedia[3]
     ]
   },
   {
@@ -84,7 +179,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/8l Medium.png',
     year: '2024',
     tags: ['Generative', 'Fluid', 'Light'],
-    media: allImagesMedia
+    media: chronosReflectionMedia
   },
   {
     id: 'nano-skin',
@@ -96,7 +191,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/ChatGPT Image Sep 28, 2025, 11_42_36 AM Medium.png',
     year: '2024',
     tags: ['Nanotech', 'Biometrics', 'Synthetic'],
-    media: allImagesMedia
+    media: nanoSkinMedia
   },
   {
     id: 'neural-portraits',
@@ -108,7 +203,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/Lucid_Origin_.png',
     year: '2024',
     tags: ['Portrait', 'Human', 'Emotion'],
-    media: allImagesMedia
+    media: neuralPortraitsMedia
   },
   {
     id: 'takoyaki-balls',
@@ -120,7 +215,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/Whisk_d991ce2a22a0e8a9484463428b48a1dedr Medium.png',
     year: '2023',
     tags: ['Culinary', 'Digital Art', 'Texture'],
-    media: allImagesMedia
+    media: takoyakiBallsMedia
   },
   {
     id: 'desert-runner',
@@ -132,7 +227,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/a_cinematic_tight_medium_shot_of_a_man_running_directly_toward_the_camera_in_the_desert_under_harsh_kw35gebnhe16i33dght0_0 Medium.png',
     year: '2024',
     tags: ['Desert', 'Cinematic', 'Motion'],
-    media: allImagesMedia
+    media: desertRunnerMedia
   },
   {
     id: 'volt-forge',
@@ -144,7 +239,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/blender Medium.png',
     year: '2024',
     tags: ['Industrial', 'Electric', 'Tech'],
-    media: allImagesMedia
+    media: voltForgeMedia
   },
   {
     id: 'void-textures',
@@ -156,7 +251,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/dd Medium.png',
     year: '2024',
     tags: ['Abstract', 'Minimalism', 'Noise'],
-    media: allImagesMedia
+    media: voidTexturesMedia
   },
   {
     id: 'cyber-gothic',
@@ -168,7 +263,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/nike neon Medium.png',
     year: '2023',
     tags: ['Architecture', 'Gothic', 'Neon'],
-    media: allImagesMedia
+    media: cyberGothicMedia
   },
   {
     id: 'taco-reality',
@@ -180,7 +275,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/taco v01 Medium.png',
     year: '2024',
     tags: ['Culinary', 'Refraction', '3D'],
-    media: allImagesMedia
+    media: tacoRealityMedia
   }
 ];
 
