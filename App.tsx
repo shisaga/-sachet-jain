@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
-import { CustomCursor } from './components/CustomCursor';
+
 import { Home } from './pages/Home';
 import { Gallery } from './pages/Gallery';
 import { ProjectDetail } from './pages/ProjectDetail';
@@ -28,21 +28,21 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route 
-          path="/ai-images" 
-          element={<Gallery title="AI Images" category="image" description="Still life, portraits, and abstract compositions generated through iterative prompting." />} 
+        <Route
+          path="/ai-images"
+          element={<Gallery title="AI Images" category="image" description="Still life, portraits, and abstract compositions generated through iterative prompting." />}
         />
-        <Route 
-          path="/ai-videos" 
-          element={<Gallery title="AI Videos" category="video" description="Cinematic motion, dream loops, and temporal experiments." />} 
+        <Route
+          path="/ai-videos"
+          element={<Gallery title="AI Videos" category="video" description="Cinematic motion, dream loops, and temporal experiments." />}
         />
-        <Route 
-          path="/ai-projects" 
-          element={<Gallery title="Full Projects" category="project" description="Comprehensive visual studies, world-building, and thematic collections." />} 
+        <Route
+          path="/ai-projects"
+          element={<Gallery title="Full Projects" category="project" description="Comprehensive visual studies, world-building, and thematic collections." />}
         />
-        <Route 
-          path="/experiments" 
-          element={<Gallery title="Experiments" category="experiment" description="Raw outputs, glitch studies, and conceptual sketches." />} 
+        <Route
+          path="/experiments"
+          element={<Gallery title="Experiments" category="experiment" description="Raw outputs, glitch studies, and conceptual sketches." />}
         />
         <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/about" element={<About />} />
@@ -55,8 +55,7 @@ const AnimatedRoutes = () => {
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen cursor-none"> {/* Added cursor-none class here to hide default, but will also do in CSS globally */}
-        <CustomCursor />
+      <div className="flex flex-col min-h-screen">
         <ScrollToTop />
         <Navigation />
         <main className="flex-grow relative">
