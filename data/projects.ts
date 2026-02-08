@@ -75,6 +75,8 @@ const voidTexturesMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/void-textures/2.png', aspectRatio: 'square', caption: 'Minimalist Noise' },
   { type: 'image', url: '/videos/void-textures/3.png', aspectRatio: 'square', caption: 'Dark Matter' },
   { type: 'image', url: '/videos/void-textures/4.png', aspectRatio: 'square', caption: 'Deep Space' },
+  { type: 'image', url: '/videos/void-textures/5.png', aspectRatio: 'square', caption: 'Dark Time Space' },
+  { type: 'image', url: '/videos/void-textures/6.png', aspectRatio: 'square', caption: 'Time Pixle' },
 
 ];
 
