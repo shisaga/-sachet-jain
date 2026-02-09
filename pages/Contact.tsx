@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
             // NOTE: You need to replace these with your actual EmailJS credentials
             // from https://dashboard.emailjs.com/
             const SERVICE_ID = 'service_677p50c'; // Replace with your Service ID
-            const TEMPLATE_ID = 'template_vkyv76i'; // Replace with your Template ID
+            const TEMPLATE_ID = 'template_zifhtau';
             const PUBLIC_KEY = 'zQw_A-At0u-frgB8v';
 
             const templateParams = {
