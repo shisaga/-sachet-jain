@@ -28,9 +28,9 @@ export const Contact: React.FC = () => {
         try {
             // NOTE: You need to replace these with your actual EmailJS credentials
             // from https://dashboard.emailjs.com/
-            const SERVICE_ID = 'service_677p50c';
-            const TEMPLATE_ID = 'template_vkyv76i';
-            const PUBLIC_KEY = 'N8N6Y_D39H3P_sxsF';
+            const SERVICE_ID = 'service_677p50c'; // Replace with your Service ID
+            const TEMPLATE_ID = 'template_vkyv76i'; // Replace with your Template ID
+            const PUBLIC_KEY = 'zQw_A-At0u-frgB8v';
 
             const templateParams = {
                 from_name: formData.name,

@@ -112,8 +112,7 @@ const queenMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/queen/2.png', aspectRatio: 'square', caption: 'Queen' },
   { type: 'image', url: '/videos/queen/3.png', aspectRatio: 'square', caption: 'Queen' },
   { type: 'image', url: '/videos/queen/4.png', aspectRatio: 'square', caption: 'Queen' },
-  { type: 'image', url: '/videos/queen/5.png', aspectRatio: 'square', caption: 'Queen' },
-  { type: 'image', url: '/videos/queen/6.png', aspectRatio: 'square', caption: 'Queen' },
+
 ];
 
 
@@ -285,8 +284,8 @@ export const projects: Project[] = [
     category: 'image',
     shortDescription: 'Culinary refraction studies.',
     fullDescription: 'A study of light and form within a digital culinary space.',
-    thumbnail: '/videos/taco v01 Medium.png',
-    heroMedia: '/videos/taco v01 Medium.png',
+    thumbnail: '/videos/queen/1.png',
+    heroMedia: '/videos/queen/1.png',
     year: '2024',
     tags: ['Culinary', 'Refraction', '3D'],
     media: queenMedia
