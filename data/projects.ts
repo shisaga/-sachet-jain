@@ -26,7 +26,7 @@ const nanoSkinMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/nano-skin/2.png', aspectRatio: 'square', caption: 'Neural Interface' },
   { type: 'image', url: '/videos/nano-skin/3.png', aspectRatio: 'square', caption: 'Bio-Digital Fusion' },
   { type: 'image', url: '/videos/nano-skin/4.png', aspectRatio: 'square', caption: 'Data Veins' },
-
+  { type: 'image', url: '/videos/nano-skin/5.png', aspectRatio: 'square', caption: 'Molecular Circuitry' },
 ];
 
 const neuralPortraitsMedia: ProjectMedia[] = [
@@ -34,7 +34,8 @@ const neuralPortraitsMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/neural-portraits/2.png', aspectRatio: 'square', caption: 'Synthetic Gaze' },
   { type: 'image', url: '/videos/neural-portraits/3.png', aspectRatio: 'square', caption: 'Digital Soul' },
   { type: 'image', url: '/videos/neural-portraits/4.png', aspectRatio: 'square', caption: 'Echoes of Humanity' },
-
+  { type: 'image', url: '/videos/neural-portraits/5.png', aspectRatio: 'square', caption: 'Neural Resonance' },
+  { type: 'image', url: '/videos/neural-portraits/6.png', aspectRatio: 'square', caption: 'The Architect' },
 ];
 
 const takoyakiBallsMedia: ProjectMedia[] = [
@@ -42,7 +43,8 @@ const takoyakiBallsMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/neural-portraits/2.png', aspectRatio: 'square', caption: 'Street Food Art' },
   { type: 'image', url: '/videos/neural-portraits/3.png', aspectRatio: 'square', caption: 'Golden Perfection' },
   { type: 'image', url: '/videos/neural-portraits/4.png', aspectRatio: 'square', caption: 'Sauce Drizzle' },
-
+  { type: 'image', url: '/videos/neural-portraits/5.png', aspectRatio: 'square', caption: 'Sizzling Surface' },
+  { type: 'image', url: '/videos/neural-portraits/6.png', aspectRatio: 'square', caption: 'Flavor Matrix' },
 ];
 
 const desertRunnerMedia: ProjectMedia[] = [
@@ -67,17 +69,17 @@ const voltForgeMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/volt-forge/2.png', aspectRatio: 'square', caption: 'Industrial Power' },
   { type: 'image', url: '/videos/volt-forge/3.png', aspectRatio: 'square', caption: 'Energy Flow' },
   { type: 'image', url: '/videos/volt-forge/4.png', aspectRatio: 'square', caption: 'Tech Aesthetics' },
-
+  { type: 'image', url: '/videos/volt-forge/5.png', aspectRatio: 'square', caption: 'Circuit Glow' },
+  { type: 'image', url: '/videos/volt-forge/6.png', aspectRatio: 'square', caption: 'High Voltage' },
 ];
 
 const voidTexturesMedia: ProjectMedia[] = [
-  { type: 'image', url: '/videos/void-textures/1.png', aspectRatio: 'square', caption: 'Abstract Void' },
   { type: 'image', url: '/videos/void-textures/2.png', aspectRatio: 'square', caption: 'Minimalist Noise' },
   { type: 'image', url: '/videos/void-textures/3.png', aspectRatio: 'square', caption: 'Dark Matter' },
   { type: 'image', url: '/videos/void-textures/4.png', aspectRatio: 'square', caption: 'Deep Space' },
   { type: 'image', url: '/videos/void-textures/5.png', aspectRatio: 'square', caption: 'Dark Time Space' },
   { type: 'image', url: '/videos/void-textures/6.png', aspectRatio: 'square', caption: 'Time Pixle' },
-
+  { type: 'image', url: '/videos/void-textures/7.png', aspectRatio: 'square', caption: 'Void Horizon' },
 ];
 
 const neonGothicMedia: ProjectMedia[] = [
@@ -93,15 +95,16 @@ const tacoRealityMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/taco-reality/2.png', aspectRatio: 'square', caption: 'Street Food Art' },
   { type: 'image', url: '/videos/taco-reality/3.png', aspectRatio: 'square', caption: 'Golden Perfection' },
   { type: 'image', url: '/videos/taco-reality/4.png', aspectRatio: 'square', caption: 'Sauce Drizzle' },
-
+  { type: 'image', url: '/videos/taco-reality/5.png', aspectRatio: 'square', caption: 'Crispy Geometry' },
+  { type: 'image', url: '/videos/taco-reality/6.png', aspectRatio: 'square', caption: 'Flavor Explosion' },
 ];
 const chronosReflectionMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/chronos-reflection/1.png', aspectRatio: 'square', caption: 'Time Manipulation' },
   { type: 'image', url: '/videos/chronos-reflection/2.png', aspectRatio: 'square', caption: 'Temporal Distortion' },
   { type: 'image', url: '/videos/chronos-reflection/3.png', aspectRatio: 'square', caption: 'Past & Future' },
   { type: 'image', url: '/videos/chronos-reflection/5.png', aspectRatio: 'square', caption: 'Time Travel' },
-
-
+  { type: 'image', url: '/videos/chronos-reflection/6.png', aspectRatio: 'square', caption: 'Epoch Shift' },
+  { type: 'image', url: '/videos/chronos-reflection/7.png', aspectRatio: 'square', caption: 'Infinity Mirror' },
 ];
 
 
