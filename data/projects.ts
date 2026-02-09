@@ -240,7 +240,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/a_cinematic_tight_medium_shot_of_a_man_running_directly_toward_the_camera_in_the_desert_under_harsh_kw35gebnhe16i33dght0_0 Medium.png',
     year: '2024',
     tags: ['Desert', 'Cinematic', 'Motion'],
-    media: desertRunnerMedia
+    media: takoyakiBallsMedia
   },
   {
     id: 'volt-forge',
