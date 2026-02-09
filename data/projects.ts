@@ -107,6 +107,15 @@ const chronosReflectionMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/chronos-reflection/7.png', aspectRatio: 'square', caption: 'Infinity Mirror' },
 ];
 
+const queenMedia: ProjectMedia[] = [
+  { type: 'image', url: '/videos/queen/1.png', aspectRatio: 'square', caption: 'Queen' },
+  { type: 'image', url: '/videos/queen/2.png', aspectRatio: 'square', caption: 'Queen' },
+  { type: 'image', url: '/videos/queen/3.png', aspectRatio: 'square', caption: 'Queen' },
+  { type: 'image', url: '/videos/queen/4.png', aspectRatio: 'square', caption: 'Queen' },
+  { type: 'image', url: '/videos/queen/5.png', aspectRatio: 'square', caption: 'Queen' },
+  { type: 'image', url: '/videos/queen/6.png', aspectRatio: 'square', caption: 'Queen' },
+];
+
 
 
 export const projects: Project[] = [
@@ -220,7 +229,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/Whisk_d991ce2a22a0e8a9484463428b48a1dedr Medium.png',
     year: '2023',
     tags: ['Culinary', 'Digital Art', 'Texture'],
-    media: takoyakiBallsMedia
+    media: tacoRealityMedia
   },
   {
     id: 'desert-runner',
@@ -271,8 +280,8 @@ export const projects: Project[] = [
     media: cyberGothicMedia
   },
   {
-    id: 'taco-reality',
-    title: 'Taco Reality',
+    id: 'queen',
+    title: 'Queen',
     category: 'image',
     shortDescription: 'Culinary refraction studies.',
     fullDescription: 'A study of light and form within a digital culinary space.',
@@ -280,7 +289,7 @@ export const projects: Project[] = [
     heroMedia: '/videos/taco v01 Medium.png',
     year: '2024',
     tags: ['Culinary', 'Refraction', '3D'],
-    media: tacoRealityMedia
+    media: queenMedia
   }
 ];
 

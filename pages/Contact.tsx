@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 import { Mail, Instagram, Twitter, Linkedin, Send, ArrowUpRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -25,25 +26,37 @@ export const Contact: React.FC = () => {
         setErrorMessage('');
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            // NOTE: You need to replace these with your actual EmailJS credentials
+            // from https://dashboard.emailjs.com/
+            const SERVICE_ID = 'service_677p50c';
+            const TEMPLATE_ID = 'template_vkyv76i';
+            const PUBLIC_KEY = 'N8N6Y_D39H3P_sxsF';
 
-            if (response.ok) {
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_email: 'sachet0985@gmail.com',
+            };
+
+            const response = await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                templateParams,
+                PUBLIC_KEY
+            );
+
+            if (response.status === 200) {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: 'Project Commission', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
-                const data = await response.json();
-                throw new Error(data.error || 'Something went wrong. Please try again.');
+                throw new Error('Failed to send message. Please try again.');
             }
         } catch (err: any) {
             setStatus('error');
-            setErrorMessage(err.message);
+            setErrorMessage(err.text || err.message || 'Something went wrong. Please try again.');
         }
     };
 
