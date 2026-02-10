@@ -114,15 +114,6 @@ const queenMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/queen/4.png', aspectRatio: 'square', caption: 'Queen' },
 ];
 
-const aiVisualsMedia: ProjectMedia[] = [
-  { type: 'video', url: '/videos/ai visuals/ferrari.mp4', aspectRatio: 'landscape', caption: 'Cyber-Ferrari' },
-  { type: 'video', url: '/videos/ai visuals/McLaren.mp4', aspectRatio: 'landscape', caption: 'McLaren Synthesis' },
-  { type: 'video', url: '/videos/ai visuals/Snow_Leopard.mp4', aspectRatio: 'landscape', caption: 'Snow Leopard Habitat' },
-  { type: 'video', url: '/videos/ai visuals/Elephant_.mp4', aspectRatio: 'landscape', caption: 'Elephantine Motion' },
-  { type: 'video', url: '/videos/ai visuals/fpv.mp4', aspectRatio: 'landscape', caption: 'Neural FPV' },
-  { type: 'video', url: '/videos/ai visuals/pizza.mp4', aspectRatio: 'landscape', caption: 'Culinary Texture' },
-];
-
 
 
 export const projects: Project[] = [
@@ -295,20 +286,80 @@ export const projects: Project[] = [
     thumbnail: '/videos/queen/1.png',
     heroMedia: '/videos/queen/1.png',
     year: '2024',
-    tags: ['Culinary', 'Refraction', '3D'],
+    tags: ['Jewellery', 'Luxury', '3D'],
     media: queenMedia
   },
   {
-    id: 'ai-visuals',
-    title: 'AI Video',
+    id: 'cyber-ferrari',
+    title: 'Cyber Ferrari',
     category: 'video',
-    shortDescription: 'The future of synthetic motion.',
-    fullDescription: 'A collection of hyper-realistic video generations exploring the boundary between real and synthetic visuals.',
+    shortDescription: 'The height of synthetic speed.',
+    fullDescription: 'A hyper-realistic video generation of a Ferrari, exploring the intersection of automotive design and AI synthesis.',
     thumbnail: '/videos/ai visuals/ferrari.mp4',
     heroMedia: '/videos/ai visuals/ferrari.mp4',
     year: '2025',
-    tags: ['AI Video', 'Sora', 'Luma'],
-    media: aiVisualsMedia
+    tags: ['Automotive', 'Cyberpunk', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/ferrari.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'mclaren-synthesis',
+    title: 'McLaren Synthesis',
+    category: 'video',
+    shortDescription: 'Precision in motion.',
+    fullDescription: 'Visualizing the aerodynamic perfection of McLaren through neural cinematography.',
+    thumbnail: '/videos/ai visuals/McLaren.mp4',
+    heroMedia: '/videos/ai visuals/McLaren.mp4',
+    year: '2025',
+    tags: ['Automotive', 'Precision', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/McLaren.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'snow-leopard',
+    title: 'Snow Leopard',
+    category: 'video',
+    shortDescription: 'Ethereal wildlife observation.',
+    fullDescription: 'Capturing the majestic and elusive nature of the snow leopard in a synthetically generated alpine habitat.',
+    thumbnail: '/videos/ai visuals/Snow_Leopard.mp4',
+    heroMedia: '/videos/ai visuals/Snow_Leopard.mp4',
+    year: '2025',
+    tags: ['Wildlife', 'Nature', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/Snow_Leopard.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'elephantine-motion',
+    title: 'Elephant',
+    category: 'video',
+    shortDescription: 'Gentle giants in focus.',
+    fullDescription: 'A study of the graceful and powerful movements of elephants, rendered with hyper-realistic detail.',
+    thumbnail: '/videos/ai visuals/Elephant_.mp4',
+    heroMedia: '/videos/ai visuals/Elephant_.mp4',
+    year: '2025',
+    tags: ['Wildlife', 'Scale', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/Elephant_.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'neural-fpv',
+    title: 'Neural FPV',
+    category: 'video',
+    shortDescription: 'A first-person journey through AI.',
+    fullDescription: 'High-speed FPV-style exploration of AI-generated landscapes, pushing the boundaries of spatial rendering.',
+    thumbnail: '/videos/ai visuals/fpv.mp4',
+    heroMedia: '/videos/ai visuals/fpv.mp4',
+    year: '2025',
+    tags: ['FPV', 'Action', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/fpv.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'culinary-pizza',
+    title: 'AI Pizza',
+    category: 'video',
+    shortDescription: 'Sizzling digital textures.',
+    fullDescription: 'Exploring the intricate details of light, texture, and steam in a hyper-realistic culinary simulation of a pizza.',
+    thumbnail: '/videos/ai visuals/pizza.mp4',
+    heroMedia: '/videos/ai visuals/pizza.mp4',
+    year: '2025',
+    tags: ['Culinary', 'Texture', 'AI Video'],
+    media: [{ type: 'video', url: '/videos/ai visuals/pizza.mp4', aspectRatio: 'landscape' }]
   }
 ];
 

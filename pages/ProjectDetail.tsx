@@ -85,11 +85,22 @@ export const ProjectDetail: React.FC = () => {
                     transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
                     className="w-full h-full"
                 >
-                    <img
-                        src={project.heroMedia}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                    />
+                    {project.heroMedia.toLowerCase().endsWith('.mp4') ? (
+                        <video
+                            src={project.heroMedia}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <img
+                            src={project.heroMedia}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                        />
+                    )}
                 </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/30"></div>
 
@@ -187,13 +198,24 @@ export const ProjectDetail: React.FC = () => {
                                         </div>
                                     </div>
                                 )}
-                                <motion.img
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                                    src={item.url}
-                                    alt={item.caption || `Project image ${index + 1}`}
-                                    className="w-full h-full object-cover"
-                                />
+                                {item.type === 'video' ? (
+                                    <video
+                                        src={item.url}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    <motion.img
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                                        src={item.url}
+                                        alt={item.caption || `Project image ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
 
                                 <div className="absolute inset-0 bg-black/0 group-hover/media:bg-black/10 transition-colors duration-300 pointer-events-none"></div>
                             </div>
