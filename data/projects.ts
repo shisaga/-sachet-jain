@@ -123,7 +123,7 @@ export const projects: Project[] = [
     category: 'video',
     shortDescription: 'Cinematic motorsport reimagined.',
     fullDescription: 'A high-octane exploration of Formula 1 racing, generated using the latest video synthesis models.',
-    thumbnail: 'https://images.unsplash.com/photo-1598460673327-023a1050e503?q=80&w=2600&auto=format&fit=crop',
+    thumbnail: '/videos/f1.mp4',
     heroMedia: '/videos/f1.mp4',
     year: '2024',
     tags: ['Veo', 'Motorsport', 'Cinematic'],
