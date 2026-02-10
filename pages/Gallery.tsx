@@ -194,12 +194,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick, them
     >
       <div className={`relative overflow-hidden ${aspectRatioClass} ${s.cardBg} w-full shadow-sm group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-700 ease-[0.22,1,0.36,1] rounded-2xl`}>
         <div className={`absolute inset-0 animate-pulse ${s.placeholder}`} />
-        <img
-          src={project.thumbnail}
-          alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
-          loading="lazy"
-        />
+        {project.thumbnail.endsWith('.mp4') ? (
+          <video
+            src={project.thumbnail}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+          />
+        ) : (
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+            loading="lazy"
+          />
+        )}
 
         {/* Overlay Gradient */}
         <div className={`absolute inset-0 bg-gradient-to-t ${theme === 'orange' ? 'from-orange-900/40' : (theme === 'dark' ? 'from-black/80' : 'from-slate-900/40')} via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out`}></div>
