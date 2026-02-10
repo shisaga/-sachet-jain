@@ -112,7 +112,15 @@ const queenMedia: ProjectMedia[] = [
   { type: 'image', url: '/videos/queen/2.png', aspectRatio: 'square', caption: 'Queen' },
   { type: 'image', url: '/videos/queen/3.png', aspectRatio: 'square', caption: 'Queen' },
   { type: 'image', url: '/videos/queen/4.png', aspectRatio: 'square', caption: 'Queen' },
+];
 
+const aiVisualsMedia: ProjectMedia[] = [
+  { type: 'video', url: '/videos/ai visuals/ferrari.mp4', aspectRatio: 'landscape', caption: 'Cyber-Ferrari' },
+  { type: 'video', url: '/videos/ai visuals/McLaren.mp4', aspectRatio: 'landscape', caption: 'McLaren Synthesis' },
+  { type: 'video', url: '/videos/ai visuals/Snow_Leopard.mp4', aspectRatio: 'landscape', caption: 'Snow Leopard Habitat' },
+  { type: 'video', url: '/videos/ai visuals/Elephant_.mp4', aspectRatio: 'landscape', caption: 'Elephantine Motion' },
+  { type: 'video', url: '/videos/ai visuals/fpv.mp4', aspectRatio: 'landscape', caption: 'Neural FPV' },
+  { type: 'video', url: '/videos/ai visuals/pizza.mp4', aspectRatio: 'landscape', caption: 'Culinary Texture' },
 ];
 
 
@@ -289,6 +297,18 @@ export const projects: Project[] = [
     year: '2024',
     tags: ['Culinary', 'Refraction', '3D'],
     media: queenMedia
+  },
+  {
+    id: 'ai-visuals',
+    title: 'AI Video',
+    category: 'video',
+    shortDescription: 'The future of synthetic motion.',
+    fullDescription: 'A collection of hyper-realistic video generations exploring the boundary between real and synthetic visuals.',
+    thumbnail: '/videos/ai visuals/ferrari.mp4',
+    heroMedia: '/videos/ai visuals/ferrari.mp4',
+    year: '2025',
+    tags: ['AI Video', 'Sora', 'Luma'],
+    media: aiVisualsMedia
   }
 ];
 
