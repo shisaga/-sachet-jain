@@ -46,15 +46,30 @@ export const Home: React.FC = () => {
     const scale1 = useTransform(smoothProgress, [0, 0.5], [1, 1.15]);
     const blur1 = useTransform(smoothProgress, [0, 0.5], ["blur(0px)", "blur(10px)"]);
 
+    // Scene 2: starts BEFORE scene 1 ends, ends AFTER scene 3 starts
+    const opacity2 = useTransform(
+        smoothProgress,
+        [0.15, 0.30, 0.60, 0.80],
+        [0, 1, 1, 0]
+    );
 
-    // Scene 2: Cross-dissolves in, slow zoom out
-    const opacity2 = useTransform(smoothProgress, [0.2, 0.5, 0.65, 0.9], [0, 1, 1, 0]);
-    const scale2 = useTransform(smoothProgress, [0.2, 0.9], [1.15, 1]);
+    const scale2 = useTransform(
+        smoothProgress,
+        [0.05, 0.75],
+        [1.15, 1]
+    );
 
-    // Scene 3: Fades in for finale
-    const opacity3 = useTransform(smoothProgress, [0.7, 1], [0, 1]);
-    const scale3 = useTransform(smoothProgress, [0.7, 1], [1.1, 1]);
+    const opacity3 = useTransform(
+        smoothProgress,
+        [0.5, 0.8],
+        [0, 1]
+    );
 
+    const scale3 = useTransform(
+        smoothProgress,
+        [0.5, 1],
+        [1.1, 1]
+    );
     // --- Text Parallax Effects ---
     // Elements move at different speeds to create depth (foreground moves faster or leaves faster)
 
@@ -119,14 +134,12 @@ export const Home: React.FC = () => {
 
                         {/* Hero Text Group */}
                         <div className="relative z-50 flex flex-col items-center">
-
                             {/* Title */}
                             <motion.div style={{ y: titleY, opacity: titleOpacity, filter: titleBlur }} className="text-center px-6">
                                 <h1 className="text-7xl md:text-[10rem] font-tech font-bold text-white mb-6 drop-shadow-[0_10px_40px_rgba(0,0,0,0.8)] tracking-tighter uppercase leading-[0.8]">
                                     Sachet Jain
                                 </h1>
                             </motion.div>
-
                             {/* Subtitle */}
                             <motion.div style={{ y: subY, opacity: subOpacity }} className="flex flex-col items-center gap-6">
                                 <h2 className="text-xs md:text-sm font-bold tracking-[0.4em] uppercase text-blue-50 drop-shadow-lg bg-white/5 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
@@ -134,14 +147,12 @@ export const Home: React.FC = () => {
                                 </h2>
                                 <div className="h-[80px] w-[1px] bg-gradient-to-b from-white via-white/40 to-transparent"></div>
                             </motion.div>
-
                             {/* Quote */}
                             <motion.div style={{ y: quoteY, opacity: quoteOpacity }} className="relative mt-2 px-6">
                                 <p className="text-slate-200 font-serif italic text-2xl md:text-4xl tracking-wide drop-shadow-md text-center max-w-2xl leading-relaxed">
                                     "Sculpting the digital sublime."
                                 </p>
                             </motion.div>
-
                         </div>
 
                         {/* Transition Text (Appears at end of scroll) */}
@@ -167,7 +178,6 @@ export const Home: React.FC = () => {
 
             {/* Selected Works - Dark Theme */}
             <section className="relative z-10 bg-black pt-24 pb-32 border-t border-white/5">
-
                 {/* Header */}
                 <div className="px-6 md:px-12 mb-24">
                     <div className="flex flex-col md:flex-row justify-between items-end pb-12 border-b border-white/10">
