@@ -69,7 +69,7 @@ export const About: React.FC = () => {
                             transition={{ duration: 1, delay: 0.6 }}
                             className="text-lg md:text-xl font-light text-slate-600 max-w-xl leading-relaxed"
                         >
-                            I help transform creative ideas into high-quality, modern, and visually powerful digital content. Specializing in AI-generated visuals, cinematic videos, and immersive storytelling that captures attention and drives engagement.
+                            I am a professional AI Artist specializing in AI-generated visuals, cinematic AI videos, AI graphics, AI voiceovers, and AI UGC content for brands, creators, and businesses. I help transform creative ideas into high-quality, modern, and visually powerful digital content that captures attention and drives engagement.
                         </motion.p>
                     </div>
 
