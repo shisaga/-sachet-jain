@@ -37,12 +37,7 @@ export const About: React.FC = () => {
         <PageTransition className="bg-white min-h-screen relative overflow-hidden text-slate-900 selection:bg-purple-600 selection:text-white">
 
             {/* Background Ambience */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white"></div>
-                <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-purple-200/30 opacity-60 pointer-events-none blur-[120px] z-0"></div>
-                <div className="absolute bottom-0 left-0 w-[60vw] h-[60vh] bg-blue-100/40 opacity-50 pointer-events-none blur-[120px] z-0"></div>
-                <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
-            </div>
+            <div className="absolute inset-0 z-0 pointer-events-none bg-white"></div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10 pt-32 pb-20">
 

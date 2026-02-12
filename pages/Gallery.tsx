@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 import { ProjectCategory, Project } from '../types';
 import { getProjectsByCategory } from '../data/projects';
-import { Play, Maximize2 } from 'lucide-react';
+import { Play, Maximize2, X } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 
 interface GalleryProps {
   title: string;
@@ -17,6 +18,7 @@ type Theme = 'light' | 'dark' | 'orange';
 export const Gallery: React.FC<GalleryProps> = ({ title, category, description }) => {
   const navigate = useNavigate();
   const projects = getProjectsByCategory(category);
+  const [selectedVideo, setSelectedVideo] = React.useState<string | null>(null);
 
   // Determine Theme
   let theme: Theme = 'light';
@@ -123,7 +125,13 @@ export const Gallery: React.FC<GalleryProps> = ({ title, category, description }
               key={project.id}
               project={project}
               index={index}
-              onClick={() => navigate(`/project/${project.id}`)}
+              onClick={() => {
+                if (project.youtubeId) {
+                  setSelectedVideo(project.youtubeId);
+                } else {
+                  navigate(`/project/${project.id}`);
+                }
+              }}
               theme={theme}
             />
           ))}
@@ -134,8 +142,48 @@ export const Gallery: React.FC<GalleryProps> = ({ title, category, description }
             Collection curating...
           </div>
         )}
+        {/* Video Modal */}
+        <AnimatePresence>
+          {selectedVideo && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
+              onClick={() => setSelectedVideo(null)}
+            >
+              <motion.button
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ delay: 0.1 }}
+                className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-50 p-2 hover:bg-white/10 rounded-full"
+                onClick={() => setSelectedVideo(null)}
+              >
+                <X size={32} />
+              </motion.button>
+
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="w-full h-full max-w-6xl aspect-video rounded-sm shadow-2xl overflow-hidden bg-black relative"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </PageTransition>
+    </PageTransition> >
   );
 };
 
