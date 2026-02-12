@@ -183,7 +183,7 @@ export const Gallery: React.FC<GalleryProps> = ({ title, category, description }
           )}
         </AnimatePresence>
       </div>
-    </PageTransition> >
+    </PageTransition>
   );
 };
 
