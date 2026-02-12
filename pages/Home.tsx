@@ -49,25 +49,25 @@ export const Home: React.FC = () => {
     // Scene 2: starts BEFORE scene 1 ends, ends AFTER scene 3 starts
     const opacity2 = useTransform(
         smoothProgress,
-        [0.15, 0.30, 0.60, 0.80],
+        [0.10, 0.20, 0.50, 0.70],
         [0, 1, 1, 0]
     );
 
     const scale2 = useTransform(
         smoothProgress,
-        [0.05, 0.75],
-        [1.15, 1]
+        [0.05, 0.65],
+        [1.10, 1]
     );
 
     const opacity3 = useTransform(
         smoothProgress,
-        [0.5, 0.8],
+        [0.05, 0.20],
         [0, 1]
     );
 
     const scale3 = useTransform(
         smoothProgress,
-        [0.5, 1],
+        [0.05, 0.65],
         [1.1, 1]
     );
     // --- Text Parallax Effects ---
@@ -87,8 +87,9 @@ export const Home: React.FC = () => {
     const quoteOpacity = useTransform(smoothProgress, [0.1, 0.35], [1, 0]);
 
     // End Text: Re-appears at bottom of scroll sequence
-    const endTextOpacity = useTransform(smoothProgress, [0.85, 0.98], [0, 1]);
-    const endTextY = useTransform(smoothProgress, [0.85, 1], [50, 0]);
+    const endTextOpacity = useTransform(smoothProgress, [0, 0.6], [0, 6]);
+    const endTextY = useTransform(smoothProgress, [0.8, 6], [1, 0]);
+
 
     return (
         <div className="bg-black min-h-screen text-slate-100 selection:bg-purple-500 selection:text-white">
