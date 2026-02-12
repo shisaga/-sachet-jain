@@ -445,6 +445,51 @@ export const projects: Project[] = [
       allImagesMedia[8],
       allImagesMedia[0]
     ]
+  },
+  {
+    id: 'yt-nike-commercial',
+    title: 'Nike Shoe Commercial',
+    category: 'project',
+    shortDescription: 'Dynamic footwear showcase.',
+    fullDescription: 'A high-energy commercial concept for Nike, emphasizing speed and design through AI-generated visuals.',
+    thumbnail: 'https://img.youtube.com/vi/nvCwEVFcvaM/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/nvCwEVFcvaM/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Commercial', 'Product'],
+    youtubeId: 'nvCwEVFcvaM',
+    media: [
+      { type: 'video', url: 'https://youtu.be/nvCwEVFcvaM', youtubeId: 'nvCwEVFcvaM', aspectRatio: 'landscape' }
+    ]
+  },
+  {
+    id: 'yt-redbull-commercial',
+    title: 'Red Bull Commercial',
+    category: 'project',
+    shortDescription: 'Energy in motion.',
+    fullDescription: 'An adrenaline-fueled commercial concept for Red Bull, capturing the essence of extreme sports and energy.',
+    thumbnail: 'https://img.youtube.com/vi/cGeB6_CZpwk/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/cGeB6_CZpwk/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Commercial', 'Action'],
+    youtubeId: 'cGeB6_CZpwk',
+    media: [
+      { type: 'video', url: 'https://youtu.be/cGeB6_CZpwk', youtubeId: 'cGeB6_CZpwk', aspectRatio: 'landscape' }
+    ]
+  },
+  {
+    id: 'yt-everest-ai',
+    title: 'Mt. Everest AI Film',
+    category: 'project',
+    shortDescription: 'AI-generated expedition.',
+    fullDescription: 'A cinematic journey to the peak of Mt. Everest, visualized through AI to create a breathtaking and surreal experience.',
+    thumbnail: 'https://img.youtube.com/vi/aFoLS4W3Hio/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/aFoLS4W3Hio/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Nature', 'AI Film'],
+    youtubeId: 'aFoLS4W3Hio',
+    media: [
+      { type: 'video', url: 'https://youtu.be/aFoLS4W3Hio', youtubeId: 'aFoLS4W3Hio', aspectRatio: 'landscape' }
+    ]
   }
 ];
 

@@ -289,13 +289,13 @@ const FeaturedCard = ({ title, category, image, video, link, index }: any) => {
                             muted
                             loop
                             playsInline
-                            className="w-full h-full object-cover scale-[1.1] transition-transform duration-[1.8s] ease-[0.22,1,0.36,1] group-hover:scale-[1.18] opacity-90 group-hover:opacity-100"
+                            className="w-full h-full object-cover scale-[1.1] transition-transform duration-[1.8s]  opacity-90 group-hover:opacity-100"
                         />
                     ) : (
                         <img
                             src={image}
                             alt={title}
-                            className="w-full h-full object-cover scale-[1.12] transition-transform duration-[1.8s] ease-[0.22,1,0.36,1] group-hover:scale-[1.18] opacity-90 group-hover:opacity-100"
+                            className="w-full h-full object-cover scale-[1.12] transition-transform duration-[1.8s] opacity-90 group-hover:opacity-100"
                         />
                     )}
                 </div>
