@@ -34,14 +34,14 @@ export const About: React.FC = () => {
     const tools = ["Veo 3", "Runway Gen-3", "Kling", "Midjourney", "Magnific AI", "Topaz Labs"];
 
     return (
-        <PageTransition className="bg-black min-h-screen relative overflow-hidden text-slate-100 selection:bg-purple-500 selection:text-white">
+        <PageTransition className="bg-white min-h-screen relative overflow-hidden text-slate-900 selection:bg-purple-600 selection:text-white">
 
             {/* Background Ambience */}
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900 to-black"></div>
-                <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-purple-900/20 opacity-40 pointer-events-none blur-[120px] z-0"></div>
-                <div className="absolute bottom-0 left-0 w-[60vw] h-[60vh] bg-blue-900/10 opacity-30 pointer-events-none blur-[120px] z-0"></div>
-                <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white"></div>
+                <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-purple-200/30 opacity-60 pointer-events-none blur-[120px] z-0"></div>
+                <div className="absolute bottom-0 left-0 w-[60vw] h-[60vh] bg-blue-100/40 opacity-50 pointer-events-none blur-[120px] z-0"></div>
+                <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
             </div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10 pt-32 pb-20">
@@ -53,28 +53,28 @@ export const About: React.FC = () => {
                             initial={{ width: 0 }}
                             animate={{ width: 100 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            className="h-[2px] bg-purple-500 mb-8"
+                            className="h-[2px] bg-purple-600 mb-8"
                         />
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                            className="text-6xl md:text-8xl font-serif font-medium leading-[0.9] tracking-tighter mb-8 text-white"
+                            className="text-6xl md:text-8xl font-serif font-medium leading-[0.9] tracking-tighter mb-8 text-slate-900"
                         >
-                            AI Visual<br /><span className="text-purple-400">Artist</span>
+                            AI Visual<br /><span className="text-purple-600">Artist</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 0.6 }}
-                            className="text-lg md:text-xl font-light text-slate-400 max-w-xl leading-relaxed"
+                            className="text-lg md:text-xl font-light text-slate-600 max-w-xl leading-relaxed"
                         >
                             I help transform creative ideas into high-quality, modern, and visually powerful digital content. Specializing in AI-generated visuals, cinematic videos, and immersive storytelling that captures attention and drives engagement.
                         </motion.p>
                     </div>
 
                     <div className="lg:col-span-5 relative h-[50vh] lg:h-[70vh]">
-                        <motion.div style={{ y: y1 }} className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+                        <motion.div style={{ y: y1 }} className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl border border-slate-200 shadow-2xl">
                             <motion.img
                                 initial={{ scale: 1.2, opacity: 0, filter: 'blur(10px)' }}
                                 animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
@@ -83,16 +83,16 @@ export const About: React.FC = () => {
                                 alt="Abstract AI Art"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
                         </motion.div>
                     </div>
                 </div>
 
                 {/* WHAT I OFFER */}
                 <div className="mb-40">
-                    <div className="flex items-end justify-between mb-16 border-b border-white/10 pb-8">
-                        <h2 className="text-4xl md:text-5xl font-serif">What I Offer</h2>
-                        <span className="hidden md:block text-xs font-bold uppercase tracking-widest text-slate-500">Services</span>
+                    <div className="flex items-end justify-between mb-16 border-b border-slate-200 pb-8">
+                        <h2 className="text-4xl md:text-5xl font-serif text-slate-900">What I Offer</h2>
+                        <span className="hidden md:block text-xs font-bold uppercase tracking-widest text-slate-400">Services</span>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -103,10 +103,10 @@ export const About: React.FC = () => {
                 </div>
 
                 {/* TOOLS & EXPERTISE */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40 border-t border-white/10 pt-20">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40 border-t border-slate-200 pt-20">
                     <div className="md:col-span-4">
-                        <h3 className="text-2xl font-serif mb-4 text-white">The Stack</h3>
-                        <p className="text-slate-400 leading-relaxed font-light">
+                        <h3 className="text-2xl font-serif mb-4 text-slate-900">The Stack</h3>
+                        <p className="text-slate-600 leading-relaxed font-light">
                             I combine advanced AI models with modern creative workflows to ensure visual excellence. My process is a hybrid of prompt engineering, traditional design principles, and post-production polish.
                         </p>
                     </div>
@@ -118,10 +118,10 @@ export const About: React.FC = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="flex items-center gap-3 p-4 bg-white/5 rounded-lg border border-white/5 hover:border-purple-500/50 transition-colors"
+                                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-purple-500/50 hover:bg-purple-50 transition-colors"
                                 >
-                                    <Zap size={16} className="text-purple-400" />
-                                    <span className="font-tech text-sm tracking-wide uppercase">{tool}</span>
+                                    <Zap size={16} className="text-purple-600" />
+                                    <span className="font-tech text-sm tracking-wide uppercase text-slate-700">{tool}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -133,15 +133,15 @@ export const About: React.FC = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="py-20 text-center bg-gradient-to-b from-purple-900/10 to-transparent rounded-3xl border border-white/5"
+                    className="py-20 text-center bg-gradient-to-b from-purple-50 to-transparent rounded-3xl border border-slate-100"
                 >
-                    <h2 className="text-4xl md:text-6xl font-serif mb-8">Ready to create?</h2>
-                    <p className="text-slate-400 mb-12 max-w-lg mx-auto">
+                    <h2 className="text-4xl md:text-6xl font-serif mb-8 text-slate-900">Ready to create?</h2>
+                    <p className="text-slate-600 mb-12 max-w-lg mx-auto">
                         Whether it's a brand campaign, a music video, or a digital experience, let's build something extraordinary.
                     </p>
                     <Link
                         to="/contact"
-                        className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-purple-400 transition-colors"
+                        className="inline-flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-purple-600 transition-colors shadow-lg hover:shadow-xl"
                     >
                         Start a Project <ArrowRight size={18} />
                     </Link>
@@ -158,13 +158,13 @@ const ServiceCard = ({ icon, title, description, index }: any) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.8 }}
-        className="group p-8 md:p-12 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-500"
+        className="group p-8 md:p-12 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500"
     >
-        <div className="mb-6 text-purple-400 group-hover:text-white transition-colors duration-500 p-4 bg-white/5 rounded-full w-fit group-hover:scale-110 group-hover:bg-purple-600 ease-out">
+        <div className="mb-6 text-purple-600 group-hover:text-white transition-colors duration-500 p-4 bg-purple-50 rounded-full w-fit group-hover:scale-110 group-hover:bg-purple-600 ease-out">
             {icon}
         </div>
-        <h3 className="text-2xl font-serif mb-4 group-hover:text-purple-300 transition-colors">{title}</h3>
-        <p className="text-slate-400 leading-relaxed font-light group-hover:text-slate-200 transition-colors">
+        <h3 className="text-2xl font-serif mb-4 text-slate-900 group-hover:text-purple-700 transition-colors">{title}</h3>
+        <p className="text-slate-500 leading-relaxed font-light group-hover:text-slate-600 transition-colors">
             {description}
         </p>
     </motion.div>
