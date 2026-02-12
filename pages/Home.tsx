@@ -159,7 +159,6 @@ export const Home: React.FC = () => {
 
                         {/* Transition Text (Appears at end of scroll) */}
                         <motion.div style={{ opacity: endTextOpacity, y: endTextY }} className="absolute bottom-24 md:bottom-32 text-center z-50">
-                            <h3 className="text-5xl md:text-7xl font-serif text-white mb-4 tracking-tight">The<br />Collection</h3>
                             <motion.div
                                 animate={{ height: [0, 40, 0], opacity: [0, 1, 0] }}
                                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -186,7 +185,7 @@ export const Home: React.FC = () => {
                         <div>
                             <h3 className="text-5xl md:text-6xl font-serif text-white mb-6 leading-none">Selected<br /><span className="text-slate-500">Works</span></h3>
                         </div>
-                        <Link to="/ai-projects" className="hidden md:flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors pb-2 group">
+                        <Link to="/ai-videos" className="hidden md:flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors pb-2 group">
                             View Full Archive <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
