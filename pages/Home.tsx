@@ -34,61 +34,62 @@ export const Home: React.FC = () => {
     });
 
     const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 40, // Softer spring for more weight
-        damping: 20,
+        stiffness: 30, // Softer response for cinematic weight
+        damping: 30,   // High damping for ultra-smooth motion
         restDelta: 0.001
     });
 
     // --- Cinematic Transforms ---
 
-    // Scene 1: Starts visible, slow zoom in, fades out with blur
-    const opacity1 = useTransform(smoothProgress, [0, 0.5], [1, 0]);
-    const scale1 = useTransform(smoothProgress, [0, 0.5], [1, 1.15]);
-    const blur1 = useTransform(smoothProgress, [0, 0.5], ["blur(0px)", "blur(10px)"]);
+    // Scene 1: Base layer, stays solid until Scene 2 is fully in
+    const opacity1 = useTransform(smoothProgress, [0.4, 0.5], [1, 0]);
+    const scale1 = useTransform(smoothProgress, [0, 0.5], [1, 1.1]);
+    const blur1 = useTransform(smoothProgress, [0.4, 0.5], ["blur(0px)", "blur(15px)"]);
 
-    // Scene 2: starts BEFORE scene 1 ends, ends AFTER scene 3 starts
+    // Scene 2: Fades in over Scene 1, then stays solid until Scene 3 is fully in
     const opacity2 = useTransform(
         smoothProgress,
-        [0.10, 0.20, 0.50, 0.70],
+        [0.2, 0.5, 0.7, 0.8],
         [0, 1, 1, 0]
     );
 
     const scale2 = useTransform(
         smoothProgress,
-        [0.05, 0.65],
-        [1.10, 1]
+        [0.2, 0.8],
+        [1.15, 1]
     );
 
+    // Scene 3: Fades in over Scene 2
     const opacity3 = useTransform(
         smoothProgress,
-        [0.05, 0.20],
+        [0.5, 0.8],
         [0, 1]
     );
 
     const scale3 = useTransform(
         smoothProgress,
-        [0.05, 0.65],
-        [1.1, 1]
+        [0.5, 1],
+        [1.15, 1]
     );
     // --- Text Parallax Effects ---
     // Elements move at different speeds to create depth (foreground moves faster or leaves faster)
 
     // Title: Moves up, blurs out
-    const titleY = useTransform(smoothProgress, [0, 0.4], [0, -150]);
-    const titleOpacity = useTransform(smoothProgress, [0, 0.25], [1, 0]);
-    const titleBlur = useTransform(smoothProgress, [0, 0.25], ["blur(0px)", "blur(20px)"]);
+    const titleY = useTransform(smoothProgress, [0, 0.4], [0, -100]);
+    const titleOpacity = useTransform(smoothProgress, [0.1, 0.35], [1, 0]);
+    const titleBlur = useTransform(smoothProgress, [0.1, 0.35], ["blur(0px)", "blur(20px)"]);
 
-    // Subtitle: Moves faster than title (separation)
-    const subY = useTransform(smoothProgress, [0, 0.4], [0, -250]);
-    const subOpacity = useTransform(smoothProgress, [0.05, 0.3], [1, 0]);
+    // Subtitle: Moves faster than title, fades out soon after
+    const subY = useTransform(smoothProgress, [0, 0.4], [0, -150]);
+    const subOpacity = useTransform(smoothProgress, [0.15, 0.4], [1, 0]);
 
-    // Quote: Moves fastest, lingers slightly less
-    const quoteY = useTransform(smoothProgress, [0, 0.4], [0, -400]);
-    const quoteOpacity = useTransform(smoothProgress, [0.1, 0.35], [1, 0]);
+    // Quote: Moves fastest, fades out last
+    const quoteY = useTransform(smoothProgress, [0, 0.4], [0, -200]);
+    const quoteOpacity = useTransform(smoothProgress, [0.2, 0.4], [1, 0]);
 
     // End Text: Re-appears at bottom of scroll sequence
-    const endTextOpacity = useTransform(smoothProgress, [0, 0.6], [0, 6]);
-    const endTextY = useTransform(smoothProgress, [0.8, 6], [1, 0]);
+    const endTextOpacity = useTransform(smoothProgress, [0.85, 0.95], [0, 1]);
+    const endTextY = useTransform(smoothProgress, [0.85, 1], [100, 0]);
 
 
     return (
