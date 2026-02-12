@@ -147,7 +147,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick, theme }) => {
-  const isVideo = project.category === 'video';
+  const isVideo = project.category === 'video' || !!project.youtubeId;
   const aspectRatioClass = isVideo ? 'aspect-video' : 'aspect-[4/5]';
 
   const styles = {

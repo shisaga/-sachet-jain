@@ -5,6 +5,7 @@ export interface ProjectMedia {
   url: string;
   caption?: string;
   aspectRatio?: 'landscape' | 'portrait' | 'square';
+  youtubeId?: string;
 }
 
 export interface Project {
@@ -18,4 +19,5 @@ export interface Project {
   media: ProjectMedia[];
   year: string;
   tags: string[];
+  youtubeId?: string;
 }

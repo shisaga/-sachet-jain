@@ -327,7 +327,7 @@ export const projects: Project[] = [
   },
   {
     id: 'elephantine-motion',
-    title: 'Elephant',
+    title: 'Gentle Giant',
     category: 'video',
     shortDescription: 'Gentle giants in focus.',
     fullDescription: 'A study of the graceful and powerful movements of elephants, rendered with hyper-realistic detail.',
@@ -351,7 +351,7 @@ export const projects: Project[] = [
   },
   {
     id: 'culinary-pizza',
-    title: 'AI Pizza',
+    title: 'Bite slice',
     category: 'video',
     shortDescription: 'Sizzling digital textures.',
     fullDescription: 'Exploring the intricate details of light, texture, and steam in a hyper-realistic culinary simulation of a pizza.',
@@ -360,6 +360,91 @@ export const projects: Project[] = [
     year: '2025',
     tags: ['Culinary', 'Texture', 'AI Video'],
     media: [{ type: 'video', url: '/videos/ai-visuals/pizza.mp4', aspectRatio: 'landscape' }]
+  },
+  {
+    id: 'yt-visual-exploration',
+    title: 'Ethereal Journeys',
+    category: 'project',
+    shortDescription: 'Cinematic latent space.',
+    fullDescription: 'An immersive visual exploration of AI-generated landscapes and abstract forms, pushing the boundaries of neural cinematography.',
+    thumbnail: 'https://img.youtube.com/vi/yJQqHl-HbDo/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/yJQqHl-HbDo/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Cinematic', 'AI Visuals'],
+    youtubeId: 'yJQqHl-HbDo',
+    media: [
+      { type: 'video', url: 'https://youtu.be/yJQqHl-HbDo', youtubeId: 'yJQqHl-HbDo', aspectRatio: 'landscape' },
+      allImagesMedia[0],
+      allImagesMedia[1]
+    ]
+  },
+  {
+    id: 'yt-neural-flow',
+    title: 'Neural Flow',
+    category: 'project',
+    shortDescription: 'Fluid biometric motion.',
+    fullDescription: 'A study of organic movement and synthetic biometrics, visualized through high-fidelity AI animation.',
+    thumbnail: 'https://img.youtube.com/vi/NkFWErWRm90/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/NkFWErWRm90/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Fluid', 'Neural'],
+    youtubeId: 'NkFWErWRm90',
+    media: [
+      { type: 'video', url: 'https://youtu.be/NkFWErWRm90', youtubeId: 'NkFWErWRm90', aspectRatio: 'landscape' },
+      allImagesMedia[2],
+      allImagesMedia[3]
+    ]
+  },
+  {
+    id: 'yt-dream-cycles',
+    title: 'Dream Cycles',
+    category: 'project',
+    shortDescription: 'Abstract temporal loops.',
+    fullDescription: 'Exploring the repetitive nature of dreams through looping cinematic sequences and impossible temporal distortions.',
+    thumbnail: 'https://img.youtube.com/vi/VgMrm4wk8fU/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/VgMrm4wk8fU/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Abstract', 'Cycles'],
+    youtubeId: 'VgMrm4wk8fU',
+    media: [
+      { type: 'video', url: 'https://youtu.be/VgMrm4wk8fU', youtubeId: 'VgMrm4wk8fU', aspectRatio: 'landscape' },
+      allImagesMedia[4],
+      allImagesMedia[5]
+    ]
+  },
+  {
+    id: 'yt-kinetic-sculpture',
+    title: 'Kinetic Sculpture',
+    category: 'project',
+    shortDescription: 'Motion in digital form.',
+    fullDescription: 'Visualizing solid forms in states of impossible kinetic motion, where sculpture meets fluid dynamics.',
+    thumbnail: 'https://img.youtube.com/vi/y9Gy3k5mhXw/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/y9Gy3k5mhXw/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Kinetic', 'Form'],
+    youtubeId: 'y9Gy3k5mhXw',
+    media: [
+      { type: 'video', url: 'https://youtu.be/y9Gy3k5mhXw', youtubeId: 'y9Gy3k5mhXw', aspectRatio: 'landscape' },
+      allImagesMedia[6],
+      allImagesMedia[7]
+    ]
+  },
+  {
+    id: 'yt-vision-quest',
+    title: 'Vision Quest',
+    category: 'project',
+    shortDescription: 'First-person AI journey.',
+    fullDescription: 'A high-speed sensory journey through evolving digital landscapes, captured with FPV-style neural cameras.',
+    thumbnail: 'https://img.youtube.com/vi/75PHtSKQxI0/maxresdefault.jpg',
+    heroMedia: 'https://img.youtube.com/vi/75PHtSKQxI0/maxresdefault.jpg',
+    year: '2025',
+    tags: ['YouTube', 'Action', 'Journey'],
+    youtubeId: '75PHtSKQxI0',
+    media: [
+      { type: 'video', url: 'https://youtu.be/75PHtSKQxI0', youtubeId: '75PHtSKQxI0', aspectRatio: 'landscape' },
+      allImagesMedia[8],
+      allImagesMedia[0]
+    ]
   }
 ];
 

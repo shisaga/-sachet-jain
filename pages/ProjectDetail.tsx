@@ -64,7 +64,23 @@ export const ProjectDetail: React.FC = () => {
                             <X size={32} />
                         </motion.button>
 
-                        {selectedMedia.toLowerCase().endsWith('.mp4') ? (
+                        {selectedMedia.includes('youtube.com') || selectedMedia.length === 11 ? (
+                            <motion.div
+                                initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                                animate={{ scale: 1, opacity: 1, y: 0 }}
+                                exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                                className="w-full h-full max-w-5xl aspect-video rounded-sm shadow-2xl overflow-hidden bg-black"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${selectedMedia.split('/').pop()?.split('v=')[1] || selectedMedia}?autoplay=1`}
+                                    className="w-full h-full border-0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </motion.div>
+                        ) : selectedMedia.toLowerCase().endsWith('.mp4') ? (
                             <motion.video
                                 src={selectedMedia}
                                 autoPlay
@@ -102,7 +118,15 @@ export const ProjectDetail: React.FC = () => {
                     transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
                     className="w-full h-full"
                 >
-                    {project.heroMedia.toLowerCase().endsWith('.mp4') ? (
+                    {project.youtubeId ? (
+                        <div className="w-full h-full relative">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${project.youtubeId}&controls=0&modestbranding=1&rel=0`}
+                                className="absolute inset-0 w-full h-[150%] -top-[25%] pointer-events-none border-0 scale-110"
+                                allow="autoplay; encrypted-media"
+                            ></iframe>
+                        </div>
+                    ) : project.heroMedia.toLowerCase().endsWith('.mp4') ? (
                         <video
                             src={project.heroMedia}
                             autoPlay
@@ -205,7 +229,7 @@ export const ProjectDetail: React.FC = () => {
                         >
                             <div
                                 className="relative rounded-xl overflow-hidden aspect-[2/3] cursor-zoom-in group/media shadow-lg hover:shadow-2xl transition-all duration-500"
-                                onClick={() => setSelectedMedia(item.url)}
+                                onClick={() => setSelectedMedia(item.youtubeId || item.url)}
                             >
                                 {/* Video Icon if needed */}
                                 {item.type === 'video' && (
@@ -215,7 +239,16 @@ export const ProjectDetail: React.FC = () => {
                                         </div>
                                     </div>
                                 )}
-                                {item.type === 'video' ? (
+                                {item.youtubeId ? (
+                                    <div className="w-full h-full relative">
+                                        <img
+                                            src={`https://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`}
+                                            alt={item.caption || "YouTube thumbnail"}
+                                            className="w-full h-full object-cover group-hover/media:scale-105 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover/media:bg-black/40 transition-colors"></div>
+                                    </div>
+                                ) : item.type === 'video' ? (
                                     <video
                                         src={item.url}
                                         autoPlay
