@@ -13,15 +13,9 @@ const scenes = [
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1614728894747-a83421789f10?q=80&w=2670&auto=format&fit=crop",
-        alt: "Digital Void",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2670&auto=format&fit=crop",
+        alt: "Cinematic Horizon",
         overlayColor: "from-black/60 via-purple-900/10 to-black/80"
-    },
-    {
-        id: 3,
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2568&auto=format&fit=crop",
-        alt: "Golden Ripples",
-        overlayColor: "from-black/30 via-transparent to-black/90"
     }
 ];
 
@@ -41,35 +35,22 @@ export const Home: React.FC = () => {
 
     // --- Cinematic Transforms ---
 
-    // Scene 1: Base layer, stays solid until Scene 2 is 100% opaque
-    const opacity1 = useTransform(smoothProgress, [0.4, 0.5], [1, 0]);
-    const scale1 = useTransform(smoothProgress, [0, 0.4], [1, 1.1]);
-    const blur1 = useTransform(smoothProgress, [0.4, 0.5], ["blur(0px)", "blur(15px)"]);
+    // Scene 1: Faster handoff now that there are only two scenes
+    const opacity1 = useTransform(smoothProgress, [0.3, 0.42], [1, 0]);
+    const scale1 = useTransform(smoothProgress, [0, 0.34], [1, 1.08]);
+    const blur1 = useTransform(smoothProgress, [0.3, 0.42], ["blur(0px)", "blur(12px)"]);
 
-    // Scene 2: Fades in over Scene 1, then stays solid until Scene 3 is 100% opaque
+    // Scene 2: Fades in over Scene 1 and remains visible
     const opacity2 = useTransform(
         smoothProgress,
-        [0.15, 0.4, 0.55, 0.65],
-        [0, 1, 1, 0]
+        [0.12, 0.34],
+        [0, 1]
     );
 
     const scale2 = useTransform(
         smoothProgress,
-        [0.15, 0.65],
-        [1.15, 1]
-    );
-
-    // Scene 3: Fades in over Scene 2
-    const opacity3 = useTransform(
-        smoothProgress,
-        [0.4, 0.65],
-        [0, 1]
-    );
-
-    const scale3 = useTransform(
-        smoothProgress,
-        [0.4, 0.75],
-        [1.15, 1]
+        [0.12, 0.7],
+        [1.2, 1.08]
     );
     // --- Text Parallax Effects ---
     // Elements move at different speeds to create depth (foreground moves faster or leaves faster)
@@ -88,15 +69,15 @@ export const Home: React.FC = () => {
     const quoteOpacity = useTransform(smoothProgress, [0.15, 0.25], [1, 0]);
 
     // End Text: Re-appears at bottom of scroll sequence before section gets unpinned
-    const endTextOpacity = useTransform(smoothProgress, [0.65, 0.72], [0, 1]);
-    const endTextY = useTransform(smoothProgress, [0.6, 0.75], [100, 0]);
+    const endTextOpacity = useTransform(smoothProgress, [0.44, 0.58], [0, 1]);
+    const endTextY = useTransform(smoothProgress, [0.4, 0.6], [100, 0]);
 
 
     return (
         <div className="bg-black min-h-screen text-slate-100 selection:bg-purple-500 selection:text-white">
 
             {/* Cinematic Scroll Sequence Container */}
-            <div ref={containerRef} className="relative h-[400vh]">
+            <div ref={containerRef} className="relative h-[220vh]">
 
                 {/* Sticky Viewport */}
                 <div className="sticky top-0 h-screen overflow-hidden">
@@ -118,14 +99,6 @@ export const Home: React.FC = () => {
                             <img src={scenes[1].image} alt={scenes[1].alt} className="w-full h-full object-cover" />
                         </motion.div>
                         <div className={`absolute inset-0 bg-gradient-to-b ${scenes[1].overlayColor}`}></div>
-                    </motion.div>
-
-                    {/* Scene 3 */}
-                    <motion.div style={{ opacity: opacity3 }} className="absolute inset-0 z-30">
-                        <motion.div style={{ scale: scale3 }} className="w-full h-full origin-center">
-                            <img src={scenes[2].image} alt={scenes[2].alt} className="w-full h-full object-cover" />
-                        </motion.div>
-                        <div className={`absolute inset-0 bg-gradient-to-b ${scenes[2].overlayColor}`}></div>
                     </motion.div>
 
                     {/* Global Grain Overlay */}
